@@ -1,0 +1,117 @@
+.button-list {
+  >li {
+    cursor: pointer;
+  }
+
+  >li:hover {
+    background-color: #eee;
+  }
+}
+
+.sidebar-header {
+  text-transform: uppercase;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.sidebar {
+  max-width: 400px;
+}
+
+.container-demo {
+  margin: 30px 100px;
+  min-height: 300px;
+  height: 100px;
+}
+
+.database-node {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+
+  > span {
+    margin-left: 7px;
+    text-transform: capitalize;
+  }
+}
+
+.database-table {
+  font-size: 17px;
+  padding: 7px;
+  cursor: pointer;
+
+  > span {
+    margin-left: 7px;
+    text-transform: capitalize;
+  }
+}
+
+.database-table:hover{
+  background-color: #ccc;
+}
+
+.button-demo {
+  background-color: white;
+  color: black;
+  border: 1px solid #95bdef;
+  cursor: pointer;
+}
+
+.database-nodes {
+  margin-top: 15px;
+}
+
+.tableactive {
+  background-color: #dadada;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@import url(static/css/animate.css);
+@import url(static/css/bootstrap.min.css);
+@import url(static/css/flaticon.css);
+@import url(static/css/font-awesome.min.css);
+@import url(static/css/magnific.min.css);
+@import url(static/css/meanmenu.min.css);
+@import url(static/css/owl.carousel.css);
+@import url(static/css/owl.transitions.css);
+@import url(static/css/responsive.css);
+@import url(static/css/style.css);
+@import url(static/css/themify-icons.css);
+@import url(static/css/venobox.css);
+
+// SQL
+.sql-hl-keyword {
+  color: #56789c;
+  font-weight: 700;
+}
+.sql-hl-function {
+  color: #ff0000;
+}
+.sql-hl-number {
+  color: #23905b;
+}
+.sql-hl-string {
+  color: #23905b;
+}
+.sql-hl-special {
+  color: #4c4c4c;
+}
+.sql-hl-bracket {
+  color: #23905b;
+}

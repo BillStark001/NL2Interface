@@ -1,0 +1,37 @@
+image: node
+
+stages:
+  - lint
+  - deploy
+
+deploy_demo:
+  stage: deploy
+  environment: staging
+  only:
+    - master
+  script:
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - echo "$SSH_PUBLIC_KEY" > ~/.ssh/id_rsa.pub
+    - chmod 600 ~/.ssh/id_rsa.pub
+    - ssh $SSH_USER@$SSH_HOST "/service/deploy.sh"
+
+eslint:
+  stage: lint
+  script:
+    # Install eslint
+    - |
+      npm install eslint \
+      eslint-config-airbnb \
+      eslint-config-prettier \
+      eslint-plugin-flowtype \
+      eslint-plugin-import \
+      eslint-plugin-jsx-a11y \
+      eslint-plugin-prettier \
+      eslint-plugin-react
+    # Run eslint
+    - node_modules/eslint/bin/eslint.js .
