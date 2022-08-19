@@ -5,12 +5,12 @@
   "development": {
     "PORT": 8000,
     "MODEL": "code-davinci-002",
-    "OPENAI_API_KEY": "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"
+    "OPENAI_API_KEY": ""
   },
   "production": {
     "PORT": 8000,
     "MODEL": "code-davinci-002",
-    "OPENAI_API_KEY": "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"
+    "OPENAI_API_KEY": ""
   },
   "salt": "$2b$08$RgUALRiauWy8S3O0jwFuMe",
   "maxDBRows": 50
