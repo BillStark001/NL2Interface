@@ -120,6 +120,3 @@ build/
 
 # MacOS
 .DS_Store
-
-# ignoring config.json to prevent uploading openai api key by accident
-config.json
