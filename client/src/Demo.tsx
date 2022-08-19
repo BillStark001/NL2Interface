@@ -96,7 +96,7 @@ class Demo extends React.Component {
           textAlign: 'center',
         }}
       >
-        Text2SQL
+        NL2Interface
       </div>
     </div>
   );
@@ -106,6 +106,9 @@ class Demo extends React.Component {
       onDrop={(acceptedFiles) => {
         const newTables: any[] = [];
         acceptedFiles.forEach((file) => {
+          if (file.name.split('.')[1] === 'sqlite') {
+            
+          }
           const reader = new FileReader();
           reader.onload = () => {
             let readerResult = reader!.result!;
@@ -152,7 +155,7 @@ class Demo extends React.Component {
         });
       }}
       multiple
-      accept=".csv,.xlsx"
+      accept=".csv,.xlsx,.sqlite"
     >
       {({ getRootProps, getInputProps }) => (
         // @ts-ignore
@@ -380,7 +383,8 @@ class Demo extends React.Component {
                     })
                       .then((res) => {
                           console.log(res.data);
-                          (document.getElementById('inputClassifier') as HTMLImageElement).innerHTML = res.data.text;
+                          let prediction = res.data.text;
+                          (document.getElementById('inputClassifier') as HTMLImageElement).innerHTML = "SELECT " + prediction + ";";
                           // this.setState({predictedSQL: res.data.sql});
                       }
                     )
@@ -478,7 +482,6 @@ class Demo extends React.Component {
             });
           }}
         />
-        <div>division</div>
       </div>
     );
   }
