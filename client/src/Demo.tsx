@@ -107,7 +107,16 @@ class Demo extends React.Component {
         const newTables: any[] = [];
         acceptedFiles.forEach((file) => {
           if (file.name.split('.')[1] === 'sqlite') {
-            
+            axios.post('http://localhost:8000/api/uploadDB', {
+                  "filename": file.name
+            })
+              .then((res) => {
+                  console.log(res.data);
+              }
+            )
+            // eslint-disable-next-line no-console
+            .catch((err) => console.log(err));
+            return;
           }
           const reader = new FileReader();
           reader.onload = () => {

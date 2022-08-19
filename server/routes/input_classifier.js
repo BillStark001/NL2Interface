@@ -1,6 +1,8 @@
 /* eslint-disable no-plusplus */
 // const fetch = require('node-fetch');
 const { Configuration, OpenAIApi } = require("openai");
+const fs = require('fs');
+const initSqlJs = require('sql.js');
 
 const {MODEL, OPENAI_API_KEY} = require('../config');
 
@@ -10,13 +12,20 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
+let dbSchema = null;
+
 module.exports = (router) => {
     // a temporary static prompt, subjective to change
 
     router.route('/predict').post(async (req, res) => {
+        if (dbSchema == null) {
+            res.status(400);
+            res.send("No database has been uploaded");
+            return;
+        }
+
         const question = JSON.stringify(req.body.question).replace(/['"]+/g, '');
 
-        // this is ugly, change it later
         const staticPrompt = 
 `CREATE TABLE author (
     aid int,
@@ -211,4 +220,35 @@ module.exports = (router) => {
 
         res.json(choice);
     });
+
+    router.route('/uploadDB').post(async (req, res) => {
+        const filename = JSON.stringify(req.body.filename).replace(/['"]+/g, '');
+        console.log(`connecting to database ${filename}`);
+
+        const rootDir = "/Users/ryanli/Desktop/labs/Noah\'s\ Ark/interactive\ nlp/spider/database/";
+        const databasePath = rootDir + filename.split('.')[0] + "/" + filename;
+        const filebuffer = fs.readFileSync(databasePath);
+
+        // load the db
+        const SQL = await initSqlJs();
+        const db = new SQL.Database(filebuffer);
+
+        // read db schema
+        const schemaSQL = "select sql from sqlite_master where type='table';";
+        const rows = db.exec(schemaSQL);
+        let result;
+        let schema = ""
+        for (const row of rows.values()) {
+            result = row            
+        }
+
+        for (const val of result.values) {
+            schema += val[0];
+            schema += "\n\n";
+        }
+
+        console.log(schema);
+        dbSchema = schema
+        res.json(schema);
+    })
 };
