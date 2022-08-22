@@ -111,7 +111,43 @@ class Demo extends React.Component {
                   "filename": file.name
             })
               .then((res) => {
-                  console.log(res.data);
+                console.log(res.data);
+                // display the tables
+                
+                /* eslint-disable */
+                for (const table in res.data) {
+                  const newTable = {
+                    rows: [],
+                    columns: [],
+                    name: "",
+                  };
+                  newTable.name = table;
+                  newTable.columns = res.data[table]["columns"].map((col: any) => {
+                    return {
+                      key: col,
+                      name: col,
+                      originalName: col,
+                      editable: true,
+                      dataType: 'number',
+                    };
+                  });
+
+                  const rows = res.data[table]["values"];
+                  rows.forEach((row: any[], i: number) => {
+                    if (i === 0) return;
+                    // const rowToAdd: any = {};
+                    newTable.columns.forEach((column: any, j: number) => {
+                      if (Number.isNaN(row[column])) {
+                        (newTable.columns[j] as any).dataType = 'text';
+                      }
+                      // rowToAdd[column] = row[column];
+                    });
+                    (newTable.rows as any).push(row);
+                  });
+                  newTables.push(newTable);
+                  console.log(newTable.rows)
+                  this.setState({ tables: newTables });
+                }
               }
             )
             // eslint-disable-next-line no-console
@@ -156,6 +192,7 @@ class Demo extends React.Component {
               (newTable.rows as any).push(rowToAdd);
             });
             newTables.push(newTable);
+            console.log(newTable.rows)
             this.setState({ tables: newTables });
           };
           if (file.name.split('.')[1] === 'xlsx')
