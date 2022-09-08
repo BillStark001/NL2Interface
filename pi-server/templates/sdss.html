@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+    <script src="./static/js/socket.io.min.js"></script>
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  <body>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        var socket = io.connect('http://localhost:8000');
+        socket.emit("data", ["specObj", "galaxy"])
+        socket.on("data", (d) => {
+            vegaEmbed('#vis', {
+                datasets: d,
+                data: { "name": "specObj"},
+                params: [
+                    {
+                        name: "input_ra_min",
+                        bind: {"input": "range", "min": 213, "max": 215, "step": 0.1}
+                    },
+                    {
+                        name: "input_ra_max",
+                        bind: {"input": "range", "min": 213, "max": 215, "step": 0.1}
+                    },
+                    {
+                        name: "input_dec_min",
+                        bind: {"input": "range", "min": -0.8, "max": -0.1, "step": 0.01}
+                    },
+                    {
+                        name: "input_dec_max",
+                        bind: {"input": "range", "min": -0.8, "max": -0.1, "step": 0.01}
+                    }
+                ],
+                hconcat: [
+                    {
+                        transform: [
+                            {"filter": {"and": ["datum.ra >= input_ra_min", "datum.ra <= input_ra_max"]}},
+                            {"filter": {"and": ["datum.dec >= input_dec_min", "datum.dec <= input_dec_max"]}},
+                        ],
+                        params: [
+                            {"name": "sel_range", "select": "interval"}
+                        ],
+                        mark: "point",
+                        encoding: {
+                            x: {"field": "ra", type: "quantitative", "scale": {"zero": false}},
+                            y: {"field": "dec", type: "quantitative",  "scale": {"zero": false}},
+                        }
+                    },
+                    {
+                        transform: [
+                            {"filter": {"param": "sel_range"}},
+                            {
+                                "lookup": "bestObjID",
+                                "from": {
+                                    "data": {"name": "galaxy"},
+                                    "key": "objID",
+                                    "fields": [
+                                        "objID",
+                                        "u",
+                                        "g",
+                                        "r",
+                                        "i",
+                                        "z"
+                                    ]
+                                },
+                                "as": [
+                                    "objID",
+                                    "u",
+                                    "g",
+                                    "r",
+                                    "i",
+                                    "gz"
+                                ]
+                            },
+                            {"window": [{"op": "row_number", "as": "row_number"}]},
+                            {"window": [{"op": "rank", "as": "rank"}]},
+                            {"filter": {"field": "rank", "lt": 10}}
+                        ],
+                        hconcat: [
+                            {
+                                     "width": 50,
+                                "title": "objID",
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "objID", "type": "nominal"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "u",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "u", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "g",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "g", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "r",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "r", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "i",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "i", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "gz",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "gz", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "sz",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "z", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "ra",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "ra", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            },
+                            {
+                                     "width": 50,
+                                "title": "dec",
+
+                                "mark": "text",
+                                "encoding": {
+                                    "text": {"field": "dec", "type": "quantitative"},
+                                    "y": {"field": "row_number", "type": "ordinal", "axis": null}
+                                }
+                            }
+                        ]
+                    }
+                ]
+            })});
+    </script>
+  </body>
+</html>

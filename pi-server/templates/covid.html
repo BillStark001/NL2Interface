@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+    <script src="./static/js/socket.io.min.js"></script>
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  <body>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        var socket = io.connect('http://localhost:8000');
+        socket.emit("data", ["covid"])
+        socket.on("data", (d) => {
+            vegaEmbed('#vis', {
+                data: { "values": d["covid"] },
+                params: [{
+                    name: "state_selector",
+                    bind: {
+                        input: "select",
+                        options: [
+                            null,
+                            "California",
+                            "Washington",
+                            "New Jersey",
+                            "Virginia",
+                            "Florida",
+                            "New York"]
+                    }
+                }, {
+                    name: "date_selector",
+                    bind: {
+                        input: "select",
+                        options: [
+                            null,
+                            "2021-06-14",
+                            "2021-06-07"
+                        ]
+                    }
+                }],
+                transform: [
+                    {"filter": {"or": ["!state_selector", "datum.state === state_selector"]}},
+                    {"filter": {"or": ["!date_selector", "datum.date >= date_selector"]}}
+                ],
+                mark: {
+                    type: 'line',
+                    height: 500,
+                    width: 500,
+                    autosize: {'type': 'fit', 'resize': true, 'contains': 'padding'}
+                },
+                encoding: {
+                    x: {
+                        timeUnit: "yearmonthdate",
+                        field: 'date',
+                        type: 'temporal',
+                    },
+                    y: {
+                        field: 'cases',
+                        type: 'quantitative',
+                        aggregate: 'sum'
+                    }
+                }
+            })});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+
+{
+	"nothing": {
+		"type"	 : ["unknown"],
+		"max_num": 9999999,
+		"effort" 		 : "lambda x: 500000 + 0",
+		"complexity" 	 : "lambda x: 500000 + 0"
+	},
+
+	"text-box": {
+		"type": ["literal", "bool", "unknown", "number", "list"],
+		"max_num": 99999999,
+		"effort" : "lambda x: 4790",
+		"complexity"   : "lambda x: 4790"
+	},
+
+	"button" : {
+		"type": ["bool"],
+		"max_num": 2,
+		"effort" : "lambda x: 750",
+		"complexity"   : "lambda x: 750"
+	},
+
+	"checkbox-single" : {
+		"type": ["bool"],
+		"max_num": 2,
+		"effort" : "lambda x: 1030",
+		"complexity"   : "lambda x: 1030"
+	},
+
+	"radio-buttons" : {
+		"type": ["literal"],
+		"max_num": 10,
+		"effort" : "lambda x: 143 + 162 * x",
+		"complexity"   : "lambda x: 143 + 162 * x"
+	},
+
+	"dropdown-list" : {
+		"type": ["literal","list"],
+		"max_num": 30,
+		"effort" : "lambda x: 276 + 125 * x + 0.07 * x * x",
+		"complexity"   : "lambda x: 276 + 125 * x + 0.07 * x * x"
+	},
+
+	"slider":{
+		"type": ["number"],
+		"max_num": 9999999,
+		"effort": "lambda x: 570",
+		"complexity": "lambda x: 570"
+	},
+
+	"checkbox-group" : {
+		"type": [""],
+		"max_num": 10,
+		"effort"       : "lambda x: 30 + 5*x*x",
+		"complexity"   : "lambda x: 30 + 5*x*x"
+	},
+
+	"dragndrop":{
+		"type"	 : [""],
+		"max_num": 40,
+		"effort" : "lambda x: 600 + x",
+		"complexity" : "lambda x: 600 + x"
+	}
+
+}

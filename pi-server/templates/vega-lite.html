@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+    <script src="./static/js/socket.io.min.js"></script>
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  <body>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        var socket = io.connect('http://localhost:8000');
+        socket.emit("data", ["idebench"])
+        socket.on("data", (d) => {
+            vegaEmbed('#vis', {
+                datasets: d,
+                data: { "name": "idebench"},
+                vconcat: [
+                    {
+                        selection: {
+                            "sel_carrier": {"type": "multi", "encodings": ["x"]}
+                        },
+                        mark: "bar",
+                        encoding: {
+                            x: {"field": "CARRIER", "type": "nominal"},
+                            y: {"field": "DEPDELAY", "type": "quantitative", "aggregate": "mean"},
+                            color: {"condition": {"param": "sel_carrier", "field": "CARRIER", type: "nominal"},
+                                "value": "orange"}
+                        }
+                    },
+                    {
+                        mark: "bar",
+                        transform: [{"filter": {"param": "sel_carrier"}}],
+                        encoding: {
+                            x: {"field": "ORIGINSTATE", "type": "nominal"},
+                            y: {"aggregate": "count"}
+                        }
+                    },
+                    {
+                        mark: "bar",
+                        transform: [
+                            {"filter": {"param": "sel_carrier"}},
+                            {"calculate": "floor(datum.ARRDELAY/30)", "as": "BINARRDELAY"}
+                        ],
+                        encoding: {
+                            x: {"field": "BINARRDELAY", "type": "ordinal"},
+                            y: {"field": "DEPDELAY", "type": "quantitative", "aggregate": "mean"},
+                        }
+                    },
+                ]
+            })});
+    </script>
+  </body>
+</html>

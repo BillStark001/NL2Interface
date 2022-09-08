@@ -26,6 +26,7 @@ import XLSX from 'xlsx';
 import EditSchemaModal from './EditSchemaModal';
 import ChooseDatabaseModal from './components/ChooseDatabaseModal';
 import { colors } from './Colors';
+// import * as vl from 'vega-lite-api';
 // import LoginModal from './components/login/LoginModal';
 // import { any } from "sequelize/types/lib/operators";
 

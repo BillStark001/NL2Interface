@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+    <script src="./static/js/socket.io.min.js"></script>
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  <body>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        var socket = io.connect('http://localhost:8000');
+        socket.emit("data", ["sales"])
+        socket.on("data", (d) => {
+            vegaEmbed('#vis', {
+                datasets: d,
+                data: { "name": "sales" },
+                params: [
+                    {
+                        name: "sel_branch",
+                        value: "A",
+                        bind: {
+                            input: "select",
+                            options: [
+                                "A",
+                                "B",
+                                "C"
+                            ]
+                        }
+                    }, {
+                        name: "sel_prodline",
+                        value: "Health and beauty",
+                        bind: {
+                            input: "select",
+                            options: [
+                                "Health and beauty",
+                                "Electronic accessories",
+                                "Home and lifestyle",
+                                "Sports and travel",
+                                "Food and beverages",
+                                "Fashion accessories"
+                            ]
+                        }
+                    }
+                ],
+                hconcat: [
+                    {
+                        params: [{
+                            "name": "date_brush",
+                            "select": {"type": "interval", "encodings": ["x"]}
+                        }],
+                        transform: [
+                            {"filter": "datum.branch === sel_branch"},
+                            {"filter": "datum.product_line === sel_prodline"}
+                        ],
+                        mark: "line",
+                        encoding: {
+                            x: {
+                                timeUnit: "yearmonthdate",
+                                field: 'date',
+                                type: 'temporal',
+                            },
+                            y: {
+                                field: 'total',
+                                type: 'quantitative',
+                                aggregate: 'sum'
+                            }
+                        }
+                    }, {
+                        transform: [
+                            {"filter": {"param": "date_brush"}},
+                            {"joinaggregate": [{
+                                    "op": "sum",
+                                    "field": "total",
+                                    "as": "SumTotal"
+                                }],
+                                "groupby": [
+                                    "city",
+                                    "product_line"
+                                ]
+                            },
+                            {"joinaggregate": [{
+                                    "op": "max",
+                                    "field": "SumTotal",
+                                    "as": "MaxTotal"
+                                }],
+                                "groupby": ["city"],
+                            },
+                            {
+                                "filter": "datum.SumTotal >= datum.MaxTotal"
+                            }
+                        ],
+                        mark: "bar",
+                        "encoding": {
+                            "x": {"field": "city", "type": "nominal"},
+                            "y": {"field": "SumTotal", "type": "quantitative"},
+                            "color": {"field": "product_line", "type": "nominal"}
+                        }
+                    }]})});
+    </script>
+  </body>
+</html>

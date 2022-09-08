@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>PI-Client Spec Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script> 
+    <script src="https://unpkg.com/vega-lite-api@0.11.0/build/vega-lite-api.min.js"></script>
+    <script src="https://unpkg.com/vega-tooltip@0.18.1/build/vega-tooltip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>
+     <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <body>
+    <script>
+
+      const vegalite = vl;
+      var view;
+
+    </script>
+    </body>
+  </head>
+  <body>
+    <div id="#canvas"></div>
+    <script>
+      div = document.getElementById("#canvas");
+      vl.register(vega, vegaLite, {});
+      select = vl.selectPoint().encodings(["x"]);
+
+      var bar = vl.markBar()
+		  .data([])
+		  .encode(vl.x().fieldQ("x"))
+		  .encode(vl.y().fieldQ("y"))
+		  .encode(vl.tooltip([vl.fieldQ("y"), vl.fieldQ("x")]))
+		  .width(500)
+		  .height(500)
+      .select(select);
+
+      vlview = vlview.addEventListener('click', (event, item) => {
+        data = vlview.data(mult_name + "_store");
+        alert(data);
+      });
+      changeset = vega.changeset().remove(() => true).insert([{"x": 2, "y": 2}, {"x": 3, "y": 3}, {"x": 1, "y": 6}]);
+      vlview.change("source_0", changeset).run();
+  		//Brush listener
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,2564 @@
+{
+    "cost": 960,
+    "backends": [
+      {
+        "id": "database",
+        "type": "db",
+        "dburi": "data/pi.db"
+      },
+      {
+        "id": "difftree_t0",
+        "type": "difftree",
+        "difftree": {
+          "id": "n90",
+          "type": "ast",
+          "value": null,
+          "children": [
+            {
+              "id": "n0",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n84",
+              "type": "ast",
+              "value": null,
+              "children": [
+                {
+                  "id": "n82",
+                  "type": "ast",
+                  "value": null,
+                  "children": [
+                    {
+                      "id": "n45",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n4",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n1",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            },
+                            {
+                              "id": "n3",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2",
+                                  "type": "literal",
+                                  "value": "SELECT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "n44",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n43",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n5",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n6",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n42",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n15",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n14",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n12",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n11",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n10",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n7",
+                                                          "type": "literal",
+                                                          "value": "",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n9",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n8",
+                                                              "type": "literal",
+                                                              "value": "CARRIER",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "n13",
+                                              "type": "literal",
+                                              "value": "",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n41",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n40",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n16",
+                                              "type": "literal",
+                                              "value": "",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n17",
+                                              "type": "literal",
+                                              "value": ",",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n18",
+                                              "type": "literal",
+                                              "value": " ",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n39",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n38",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n36",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n35",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n34",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n19",
+                                                                  "type": "literal",
+                                                                  "value": "AVG",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n20",
+                                                                  "type": "literal",
+                                                                  "value": "(",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n21",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n31",
+                                                                  "type": "ast",
+                                                                  "value": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "n30",
+                                                                      "type": "ast",
+                                                                      "value": null,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "n28",
+                                                                          "type": "ast",
+                                                                          "value": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "n27",
+                                                                              "type": "ast",
+                                                                              "value": null,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "n26",
+                                                                                  "type": "ast",
+                                                                                  "value": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "n25",
+                                                                                      "type": "ast",
+                                                                                      "value": null,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "n22",
+                                                                                          "type": "literal",
+                                                                                          "value": "",
+                                                                                          "children": []
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "n24",
+                                                                                          "type": "ast",
+                                                                                          "value": null,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "n23",
+                                                                                              "type": "literal",
+                                                                                              "value": "DEPDELAY",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "id": "n29",
+                                                                          "type": "literal",
+                                                                          "value": "",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "id": "n32",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n33",
+                                                                  "type": "literal",
+                                                                  "value": ")",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n37",
+                                                      "type": "literal",
+                                                      "value": "",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n59",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n58",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n49",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n46",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n48",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n47",
+                                      "type": "literal",
+                                      "value": "FROM",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n50",
+                              "type": "literal",
+                              "value": " ",
+                              "children": []
+                            },
+                            {
+                              "id": "n57",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n55",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n54",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n52",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n51",
+                                              "type": "literal",
+                                              "value": "idebench",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "n53",
+                                          "type": "literal",
+                                          "value": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n56",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n60",
+                      "type": "literal",
+                      "value": "",
+                      "children": []
+                    },
+                    {
+                      "id": "n81",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n80",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n64",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n61",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n63",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n62",
+                                      "type": "literal",
+                                      "value": "GROUP",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n68",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n65",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n67",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n66",
+                                      "type": "literal",
+                                      "value": "BY",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n78",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n76",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n69",
+                                      "type": "literal",
+                                      "value": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "n75",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n74",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n73",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n70",
+                                                  "type": "literal",
+                                                  "value": "",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "id": "n72",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n71",
+                                                      "type": "literal",
+                                                      "value": "CARRIER",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n77",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n79",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "n83",
+                  "type": "literal",
+                  "value": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "n85",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n86",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n87",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n88",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n89",
+              "type": "literal",
+              "value": "",
+              "children": []
+            }
+          ]
+        },
+        "backend": "database"
+      },
+      {
+        "id": "difftree_t1",
+        "type": "difftree",
+        "difftree": {
+          "id": "n1997",
+          "type": "ast",
+          "value": null,
+          "children": [
+            {
+              "id": "n1990",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n2000",
+              "type": "ast",
+              "value": null,
+              "children": [
+                {
+                  "id": "n2078",
+                  "type": "ast",
+                  "value": null,
+                  "children": [
+                    {
+                      "id": "n2001",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n2002",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2003",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            },
+                            {
+                              "id": "n2004",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2005",
+                                  "type": "literal",
+                                  "value": "SELECT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "n2006",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2007",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2008",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n2009",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n2010",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2011",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2012",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2013",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n2014",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n2015",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2016",
+                                                          "type": "literal",
+                                                          "value": "",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n2017",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2018",
+                                                              "type": "literal",
+                                                              "value": "ORIGINSTATE",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "n2019",
+                                              "type": "literal",
+                                              "value": "",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n2020",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2021",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2022",
+                                              "type": "literal",
+                                              "value": "",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n2023",
+                                              "type": "literal",
+                                              "value": ",",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n2024",
+                                              "type": "literal",
+                                              "value": " ",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n2025",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n2026",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n2027",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2028",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2029",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n2030",
+                                                                  "type": "literal",
+                                                                  "value": "COUNT",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n2031",
+                                                                  "type": "literal",
+                                                                  "value": "(",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n2032",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n2033",
+                                                                  "type": "ast",
+                                                                  "value": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "n2034",
+                                                                      "type": "ast",
+                                                                      "value": null,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "n2035",
+                                                                          "type": "ast",
+                                                                          "value": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "n2036",
+                                                                              "type": "literal",
+                                                                              "value": "*",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "id": "n2037",
+                                                                          "type": "literal",
+                                                                          "value": "",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "id": "n2038",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n2039",
+                                                                  "type": "literal",
+                                                                  "value": ")",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n2040",
+                                                      "type": "literal",
+                                                      "value": "",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n2041",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n2042",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2043",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2044",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n2045",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2046",
+                                      "type": "literal",
+                                      "value": "FROM",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n2047",
+                              "type": "literal",
+                              "value": " ",
+                              "children": []
+                            },
+                            {
+                              "id": "n2048",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2049",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2050",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2051",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2052",
+                                              "type": "literal",
+                                              "value": "idebench",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "n2053",
+                                          "type": "literal",
+                                          "value": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n2054",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n2105",
+                      "type": "co-optional",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n2104",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2112",
+                              "type": "co-optional",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2111",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2096",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2097",
+                                          "type": "literal",
+                                          "value": " ",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "n2098",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2099",
+                                              "type": "literal",
+                                              "value": "WHERE",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n2100",
+                                      "type": "literal",
+                                      "value": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "n2110",
+                                      "type": "optional",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2114",
+                                          "type": "multi",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2116",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n2129",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n2117",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2118",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2119",
+                                                              "type": "literal",
+                                                              "value": "",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "id": "n2120",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n2121",
+                                                                  "type": "literal",
+                                                                  "value": "CARRIER",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n2122",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2123",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2124",
+                                                              "type": "literal",
+                                                              "value": " ",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "id": "n2125",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n2126",
+                                                                  "type": "literal",
+                                                                  "value": "=",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "id": "n2127",
+                                                              "type": "literal",
+                                                              "value": " ",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n2131",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2133",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2132",
+                                                              "type": "any",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n248",
+                                                                  "type": "literal",
+                                                                  "value": "'AA'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n264",
+                                                                  "type": "literal",
+                                                                  "value": "'DL'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n280",
+                                                                  "type": "literal",
+                                                                  "value": "'UA'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n389",
+                                                                  "type": "literal",
+                                                                  "value": "'CO'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n405",
+                                                                  "type": "literal",
+                                                                  "value": "'FL'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n421",
+                                                                  "type": "literal",
+                                                                  "value": "'HP'",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "delim": " OR "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n2057",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n2058",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2059",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2060",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n2061",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2062",
+                                      "type": "literal",
+                                      "value": "GROUP",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n2063",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2064",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n2065",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2066",
+                                      "type": "literal",
+                                      "value": "BY",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n2067",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2068",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2069",
+                                      "type": "literal",
+                                      "value": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "n2070",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2071",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2072",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n2073",
+                                                  "type": "literal",
+                                                  "value": "",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "id": "n2074",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n2075",
+                                                      "type": "literal",
+                                                      "value": "CARRIER",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n2076",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n2077",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "n1999",
+                  "type": "literal",
+                  "value": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "n1992",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1993",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1994",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1995",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1996",
+              "type": "literal",
+              "value": "",
+              "children": []
+            }
+          ]
+        },
+        "backend": "database"
+      },
+      {
+        "id": "difftree_t2",
+        "type": "difftree",
+        "difftree": {
+          "id": "n1873",
+          "type": "ast",
+          "value": null,
+          "children": [
+            {
+              "id": "n1866",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1876",
+              "type": "ast",
+              "value": null,
+              "children": [
+                {
+                  "id": "n1989",
+                  "type": "ast",
+                  "value": null,
+                  "children": [
+                    {
+                      "id": "n1877",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n1878",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n1879",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            },
+                            {
+                              "id": "n1880",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1881",
+                                  "type": "literal",
+                                  "value": "SELECT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "n1882",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n1883",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1884",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n1885",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n1886",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1887",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n1888",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n1889",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n1890",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n1891",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n1892",
+                                                          "type": "literal",
+                                                          "value": "ROUND",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n1893",
+                                                          "type": "literal",
+                                                          "value": "(",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n1894",
+                                                          "type": "literal",
+                                                          "value": "",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n1895",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n1896",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n1897",
+                                                                  "type": "ast",
+                                                                  "value": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "n1898",
+                                                                      "type": "ast",
+                                                                      "value": null,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "n1899",
+                                                                          "type": "ast",
+                                                                          "value": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "n1900",
+                                                                              "type": "ast",
+                                                                              "value": null,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "n1901",
+                                                                                  "type": "ast",
+                                                                                  "value": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "n1902",
+                                                                                      "type": "literal",
+                                                                                      "value": "",
+                                                                                      "children": []
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "n1903",
+                                                                                      "type": "ast",
+                                                                                      "value": null,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "n1904",
+                                                                                          "type": "literal",
+                                                                                          "value": "ARRDELAY",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "id": "n1905",
+                                                                              "type": "ast",
+                                                                              "value": null,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "n1906",
+                                                                                  "type": "ast",
+                                                                                  "value": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "n1907",
+                                                                                      "type": "literal",
+                                                                                      "value": " ",
+                                                                                      "children": []
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "n1908",
+                                                                                      "type": "ast",
+                                                                                      "value": null,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "n1909",
+                                                                                          "type": "literal",
+                                                                                          "value": "/",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "id": "n1910",
+                                                                                      "type": "literal",
+                                                                                      "value": " ",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "id": "n1911",
+                                                                              "type": "ast",
+                                                                              "value": null,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "n1912",
+                                                                                  "type": "ast",
+                                                                                  "value": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "n1913",
+                                                                                      "type": "literal",
+                                                                                      "value": "30",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "id": "n1914",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "id": "n1915",
+                                                          "type": "literal",
+                                                          "value": "",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n1916",
+                                                          "type": "literal",
+                                                          "value": ")",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "n1917",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n1918",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n1919",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n1920",
+                                                          "type": "literal",
+                                                          "value": " ",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "id": "n1921",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n1922",
+                                                              "type": "literal",
+                                                              "value": "AS",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n1923",
+                                                      "type": "literal",
+                                                      "value": " ",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "id": "n1924",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n1925",
+                                                          "type": "literal",
+                                                          "value": "BINARRDELAY",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n1926",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n1927",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n1928",
+                                              "type": "literal",
+                                              "value": "",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n1929",
+                                              "type": "literal",
+                                              "value": ",",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n1930",
+                                              "type": "literal",
+                                              "value": " ",
+                                              "children": []
+                                            },
+                                            {
+                                              "id": "n1931",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n1932",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n1933",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n1934",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n1935",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n1936",
+                                                                  "type": "literal",
+                                                                  "value": "AVG",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n1937",
+                                                                  "type": "literal",
+                                                                  "value": "(",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n1938",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n1939",
+                                                                  "type": "ast",
+                                                                  "value": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "id": "n1940",
+                                                                      "type": "ast",
+                                                                      "value": null,
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "n1941",
+                                                                          "type": "ast",
+                                                                          "value": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "id": "n1942",
+                                                                              "type": "ast",
+                                                                              "value": null,
+                                                                              "children": [
+                                                                                {
+                                                                                  "id": "n1943",
+                                                                                  "type": "ast",
+                                                                                  "value": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "id": "n1944",
+                                                                                      "type": "ast",
+                                                                                      "value": null,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "id": "n1945",
+                                                                                          "type": "literal",
+                                                                                          "value": "",
+                                                                                          "children": []
+                                                                                        },
+                                                                                        {
+                                                                                          "id": "n1946",
+                                                                                          "type": "ast",
+                                                                                          "value": null,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "id": "n1947",
+                                                                                              "type": "literal",
+                                                                                              "value": "DEPDELAY",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "id": "n1948",
+                                                                          "type": "literal",
+                                                                          "value": "",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "id": "n1949",
+                                                                  "type": "literal",
+                                                                  "value": "",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n1950",
+                                                                  "type": "literal",
+                                                                  "value": ")",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n1951",
+                                                      "type": "literal",
+                                                      "value": "",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n1952",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n1953",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n1954",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1955",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n1956",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1957",
+                                      "type": "literal",
+                                      "value": "FROM",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n1958",
+                              "type": "literal",
+                              "value": " ",
+                              "children": []
+                            },
+                            {
+                              "id": "n1959",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1960",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1961",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n1962",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n1963",
+                                              "type": "literal",
+                                              "value": "idebench",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "n1964",
+                                          "type": "literal",
+                                          "value": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n1965",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n2090",
+                      "type": "co-optional",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n2089",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n2093",
+                              "type": "co-optional",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n2092",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n2081",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2082",
+                                          "type": "literal",
+                                          "value": " ",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "n2083",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2084",
+                                              "type": "literal",
+                                              "value": "WHERE",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n2085",
+                                      "type": "literal",
+                                      "value": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "n2091",
+                                      "type": "optional",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n2109",
+                                          "type": "multi",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n2135",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n2148",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n2136",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2137",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2138",
+                                                              "type": "literal",
+                                                              "value": "",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "id": "n2139",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n2140",
+                                                                  "type": "literal",
+                                                                  "value": "CARRIER",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n2141",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2142",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2143",
+                                                              "type": "literal",
+                                                              "value": " ",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "id": "n2144",
+                                                              "type": "ast",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n2145",
+                                                                  "type": "literal",
+                                                                  "value": "=",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "id": "n2146",
+                                                              "type": "literal",
+                                                              "value": " ",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "n2150",
+                                                      "type": "ast",
+                                                      "value": null,
+                                                      "children": [
+                                                        {
+                                                          "id": "n2152",
+                                                          "type": "ast",
+                                                          "value": null,
+                                                          "children": [
+                                                            {
+                                                              "id": "n2151",
+                                                              "type": "any",
+                                                              "value": null,
+                                                              "children": [
+                                                                {
+                                                                  "id": "n686",
+                                                                  "type": "literal",
+                                                                  "value": "'AA'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n702",
+                                                                  "type": "literal",
+                                                                  "value": "'DL'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n718",
+                                                                  "type": "literal",
+                                                                  "value": "'UA'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n862",
+                                                                  "type": "literal",
+                                                                  "value": "'CO'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n878",
+                                                                  "type": "literal",
+                                                                  "value": "'FL'",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "id": "n894",
+                                                                  "type": "literal",
+                                                                  "value": "'HP'",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "delim": " OR "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n1968",
+                      "type": "ast",
+                      "value": null,
+                      "children": [
+                        {
+                          "id": "n1969",
+                          "type": "ast",
+                          "value": null,
+                          "children": [
+                            {
+                              "id": "n1970",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1971",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n1972",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1973",
+                                      "type": "literal",
+                                      "value": "GROUP",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n1974",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1975",
+                                  "type": "literal",
+                                  "value": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "n1976",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1977",
+                                      "type": "literal",
+                                      "value": "BY",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n1978",
+                              "type": "ast",
+                              "value": null,
+                              "children": [
+                                {
+                                  "id": "n1979",
+                                  "type": "ast",
+                                  "value": null,
+                                  "children": [
+                                    {
+                                      "id": "n1980",
+                                      "type": "literal",
+                                      "value": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "n1981",
+                                      "type": "ast",
+                                      "value": null,
+                                      "children": [
+                                        {
+                                          "id": "n1982",
+                                          "type": "ast",
+                                          "value": null,
+                                          "children": [
+                                            {
+                                              "id": "n1983",
+                                              "type": "ast",
+                                              "value": null,
+                                              "children": [
+                                                {
+                                                  "id": "n1984",
+                                                  "type": "literal",
+                                                  "value": "",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "id": "n1985",
+                                                  "type": "ast",
+                                                  "value": null,
+                                                  "children": [
+                                                    {
+                                                      "id": "n1986",
+                                                      "type": "literal",
+                                                      "value": "BINARRDELAY",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n1987",
+                                  "type": "literal",
+                                  "value": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n1988",
+                              "type": "literal",
+                              "value": "",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "n1875",
+                  "type": "literal",
+                  "value": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "n1868",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1869",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1870",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1871",
+              "type": "literal",
+              "value": "",
+              "children": []
+            },
+            {
+              "id": "n1872",
+              "type": "literal",
+              "value": "",
+              "children": []
+            }
+          ]
+        },
+        "backend": "database"
+      }
+    ],
+    "layout": {
+      "id": "w114",
+      "width": 600,
+      "height": 930,
+      "children": [
+        {
+          "id": "w0",
+          "width": 600,
+          "height": 300,
+          "type": "ref",
+          "ref": "w0"
+        },
+        {
+          "id": "w1",
+          "width": 600,
+          "height": 300,
+          "type": "ref",
+          "ref": "w1"
+        },
+        {
+          "id": "w2",
+          "width": 600,
+          "height": 300,
+          "type": "ref",
+          "ref": "w2"
+        }
+      ],
+      "type": "VLayout"
+    },
+    "views": [
+      {
+        "id": "w0",
+        "type": "Bar",
+        "data": {
+          "backend": "difftree_t0",
+          "query": {}
+        },
+        "mapping": {
+          "x": "$0",
+          "y": "$1"
+        },
+        "schema": {
+          "x": "str",
+          "y": "num"
+        },
+        "label": {
+          "x": "CARRIER",
+          "y": "AVG(DEPDELAY)"
+        },
+        "width": 590,
+        "height": 290
+      },
+      {
+        "id": "w1",
+        "type": "Bar",
+        "data": {
+          "backend": "difftree_t1",
+          "query": {
+            "n2132": [
+              0
+            ],
+            "n2114": [],
+            "n2110": [
+              0
+            ]
+          }
+        },
+        "mapping": {
+          "x": "$0",
+          "y": "$1"
+        },
+        "schema": {
+          "x": "str",
+          "y": "num"
+        },
+        "label": {
+          "x": "ORIGINSTATE",
+          "y": "COUNT(*)"
+        },
+        "width": 590,
+        "height": 290
+      },
+      {
+        "id": "w2",
+        "type": "Bar",
+        "data": {
+          "backend": "difftree_t2",
+          "query": {
+            "n2151": [
+              0
+            ],
+            "n2109": [],
+            "n2091": [
+              0
+            ]
+          }
+        },
+        "mapping": {
+          "x": "$0",
+          "y": "$1"
+        },
+        "schema": {
+          "x": "num",
+          "y": "num"
+        },
+        "label": {
+          "x": "ROUND(ARRDELAY / 30) AS BINARRDELAY",
+          "y": "AVG(DEPDELAY)"
+        },
+        "width": 590,
+        "height": 290
+      }
+    ],
+    "interactions": [
+      {
+        "id": "50-0",
+        "source": "w0",
+        "target": "w2",
+        "m": {
+          "type": "MULTI",
+          "space": "mark"
+        },
+        "h": {
+          "n2091": "selected",
+          "n2151": "x"
+        }
+      },
+      {
+        "id": "50-1",
+        "source": "w0",
+        "target": "w1",
+        "m": {
+          "type": "MULTI",
+          "space": "mark"
+        },
+        "h": {
+          "n2110": "selected",
+          "n2132": "x"
+        }
+      },
+      {
+        "id": "50-0",
+        "source": "w0",
+        "target": "w2",
+        "m": {
+          "type": "MULTI",
+          "space": "mark"
+        },
+        "h": {
+          "n2091": "selected",
+          "n2151": "x"
+        }
+      },
+      {
+        "id": "50-1",
+        "source": "w0",
+        "target": "w1",
+        "m": {
+          "type": "MULTI",
+          "space": "mark"
+        },
+        "h": {
+          "n2110": "selected",
+          "n2132": "x"
+        }
+      }
+    ]
+  }
