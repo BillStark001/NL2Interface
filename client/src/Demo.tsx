@@ -26,9 +26,20 @@ import XLSX from 'xlsx';
 import EditSchemaModal from './EditSchemaModal';
 import ChooseDatabaseModal from './components/ChooseDatabaseModal';
 import { colors } from './Colors';
-// import * as vl from 'vega-lite-api';
-// import LoginModal from './components/login/LoginModal';
-// import { any } from "sequelize/types/lib/operators";
+// import { PIWorkflow } from './pi-server/static/js/pi-client';
+// // import './pi-server/static/js/vega-lite-api';
+// // import './pi-server/static/js/vega-lite.5.1.1';
+// // import './pi-server/static/js/vega.5.7.2';
+// // import './pi-server/static/js/vega-embed.6';
+// import * as vl from './pi-server/static/js/vega-lite-api';
+// // import { vega, vegaLite, vl } from './pi-server/static/js/vega-embed.6';
+// import { io } from './pi-server/static/js/socket.io';
+// import * as vega from 'vega';
+// import * as vegaLite from 'vega-lite';
+// // import { vl } from 'vega-lite-api';
+// // import * as vl from 'vega-lite-api';
+// // import LoginModal from './components/login/LoginModal';
+// // import { any } from "sequelize/types/lib/operators";
 
 const typeMap: any = {
   text: <MdTextFormat style={{ color: colors.red }} />,
@@ -51,6 +62,11 @@ const styles = {
   },
 };
 
+// const session = "demo-" + Date.now();
+// const socket = io.connect('http://localhost:8000');
+
+// const workflow = PIWorkflow(socket, session, { enableHelp: false });
+
 class Demo extends React.Component {
   constructor(props: any) {
     super(props);
@@ -61,10 +77,19 @@ class Demo extends React.Component {
       activeTable: 0,
       editSchemaModalVisible: false,
       predictedSQL: '',
-      query: '',
+      query: ''
       // chooseDatabaseModalVisible: true,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    // vl.register(vega, vegaLite, {
+    //     config: {
+    //       axis: { 
+    //         titleFontSize: 30,
+    //         labelFontSize: 30 
+    //       }
+    //     },
+    //     view: { renderer: "svg" }
+    // });
   }
 
   componentDidMount(): void {

@@ -1,2 +1,4 @@
 /client/build/*
 /old-code/*
+/client/src/pi-client/*
+/client/src/pi-server/*
