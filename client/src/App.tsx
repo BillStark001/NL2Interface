@@ -8,12 +8,14 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './Landing';
 import Demo from './Demo';
+import PIDemo from './PIDemo';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Route exact path="/" component={Landing} />
       <Route path="/demo" component={Demo} />
+      <Route path="/demo/pi" component={PIDemo} />
     </BrowserRouter>
   );
 };
