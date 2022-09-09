@@ -182,7 +182,6 @@ def infer_type_col_ref(node, info, catalog):
 def infer_type_collect_type(node, in_expr=False):
     '''
         propagate type from bottom to up in expr scope shown in the ()
-
                 node2
                 (None)
             /   |   \
@@ -191,7 +190,6 @@ def infer_type_collect_type(node, in_expr=False):
         /  |        /  |
         a + 1      b + 1
         (a)        (b)
-
     '''
     if isinstance(node, ASTNode):
         if "expr" in eval(node.rule):
@@ -272,7 +270,6 @@ def infer_type_broadcast(node, typ, catalog):
                         /  |  |
                     ( 1, 2, 3 )
                         (id)
-
             '''
             # in will return 0 or 1
             node.typ = Type(EType.NUMBER)
@@ -398,25 +395,22 @@ def sample_queries(tree, catalog, db):
     sample_outputs = []
 
     qid = 1
-    num_tries = 100
+    num_retries = 100
     while remain(tree, history) > 0:
-        num_tries -= 1
-        assert(num_tries > 0)
+        num_retries -= 1
+        assert(num_retries > 0)
         choices = {}
         sample = sample_node(tree, qid, history, choices)
         query = sample.get_text()
         print(query)
         try:
             out = db.execute(query)
-            succ = True
         except:
-            succ = False
-        if succ:
-            queries.append((sample, qid))
-            sample_outputs.append(out)
-            for nid in choices:
-                history[nid] |= choices[nid]
-            qid += 1
-        else:
-            clear_node(tree, qid)
+            raise Exception("invalid sample query " + query)
+
+        queries.append((sample, qid))
+        sample_outputs.append(out)
+        for nid in choices:
+            history[nid] |= choices[nid]
+        qid += 1
     return queries, sample_outputs

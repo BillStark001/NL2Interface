@@ -85,11 +85,11 @@ class Node:
     def to_query(self, binding, ids="", num=0, selected=True):
         if self.type == Node.AST:
             sub_queries = list(map(lambda n: n.to_query(binding, ids, num), self.children))
-            return "".join(sub_queries)
+            return " ".join(sub_queries)
 
         if self.type == Node.LIST:
             sub_queries = list(map(lambda n: n.to_query(binding, ids, num), self.children))
-            return self.delim.join(filter(lambda s: len(s) > 0, sub_queries))
+            return (" " + self.delim + " ").join(filter(lambda s: len(s) > 0, sub_queries))
 
         elif self.type == self.LITERAL:
             return self.value
@@ -141,13 +141,13 @@ class Node:
             sub_queries = []
             for i in binding[self.id]:
                 sub_queries.append(self.children[i].to_query(binding, ids, num))
-            return self.delim.join(sub_queries)
+            return (" " + self.delim + " ").join(sub_queries)
 
         elif self.type == self.MULTI:
             sub_queries = []
             for n in range(self.max_num(self, binding)):
                 sub_queries.append(self.children[0].to_query(binding, ids, n))
-            return self.delim.join(sub_queries)
+            return (" " + self.delim + " ").join(sub_queries)
 
         else:
             # TODO: other cases?

@@ -100,7 +100,7 @@ def runq(msg):
   session.query_log.append(q)
 
   # emit("table", dict(rows=data, columns=list(keys)))
-  # emit("log", session.query_log)
+  emit("log", session.query_log)
   time.sleep(0.01)
   run_pi(session, session.query_log, pre_generalize)
 
