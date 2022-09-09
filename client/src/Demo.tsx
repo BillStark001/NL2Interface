@@ -3,6 +3,10 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
+
+
 import React from 'react';
 import ReactDataGrid from 'react-data-grid';
 import 'react-data-grid/dist/react-data-grid.css';
@@ -11,7 +15,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import SendIcon from '@material-ui/icons/Send';
 import EditIcon from '@material-ui/icons/Edit';
 import Dropzone from 'react-dropzone';
-import parse from 'csv-parse/lib/sync';
+import {parse} from 'csv-parse/lib/sync';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import sqlFormatter from 'sql-formatter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -22,7 +26,7 @@ import {
 } from 'react-icons/ai';
 import { MdTextFormat } from 'react-icons/md';
 import axios from 'axios';
-import XLSX from 'xlsx';
+import * as XLSX from 'xlsx';
 import EditSchemaModal from './EditSchemaModal';
 import ChooseDatabaseModal from './components/ChooseDatabaseModal';
 import { colors } from './Colors';
@@ -478,7 +482,7 @@ class Demo extends React.Component {
             >
               <div id="inputClassifier"> </div>
               <SyntaxHighlighter language="sql" style={vs}>
-                {sqlFormatter.format(predictedSQL)}
+                {predictedSQL}
               </SyntaxHighlighter>
             </div>
 
