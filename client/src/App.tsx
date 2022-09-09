@@ -15,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <Route exact path="/" component={Landing} />
       <Route path="/demo" component={Demo} />
-      <Route path="/demo/pi" component={PIDemo} />
+      <Route path="/pi" component={PIDemo} />
     </BrowserRouter>
   );
 };

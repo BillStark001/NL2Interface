@@ -120,3 +120,4 @@ build/
 
 # MacOS
 .DS_Store
+pi-server/wu.db

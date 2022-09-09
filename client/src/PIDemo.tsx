@@ -69,6 +69,10 @@ class PIDemo extends React.Component {
 
   initSocket = (): void => {
     const socket = this.socket;
+    socket.on("spec", (spec) => {
+      this.resetInterface();
+      this.workflow.init(spec, this.divInterface.current!);
+    });
     socket.on("preview", ({ preview }) => {
       const div = this.divPreview.current!;
       const regex = /(.*?)~\$(.*?)\$~(.*)/;
