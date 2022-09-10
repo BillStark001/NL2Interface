@@ -5,7 +5,7 @@
   "development": {
     "PORT": 8000,
     "MODEL": "code-davinci-002",
-    "OPENAI_API_KEY": ""
+    "OPENAI_API_KEY": "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"
   },
   "production": {
     "PORT": 8000,

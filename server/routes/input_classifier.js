@@ -307,7 +307,7 @@ module.exports = (router) => {
         const filename = JSON.stringify(req.body.filename).replace(/['"]+/g, '');
         console.log(`connecting to database ${filename}`);
 
-        const rootDir = "/Users/ryanli/Desktop/labs/Noah's Ark/interactive nlp/spider/database/";
+        const rootDir = "C:/Users/zhaoj/Desktop/";
         const databasePath = `${rootDir}${filename.split('.')[0]}/${filename}`
         
         // rootDir + filename.split('.')[0] + "/" + filename;
