@@ -35,7 +35,6 @@ class PIDemo extends React.Component {
   divInterface: React.RefObject<HTMLDivElement>;
   divPreview: React.RefObject<HTMLDivElement>;
   inputGeneralize: React.RefObject<HTMLInputElement>;
-  tableResults: React.RefObject<HTMLTableElement>;
 
   constructor(props: any) {
     super(props);
@@ -58,7 +57,6 @@ class PIDemo extends React.Component {
     this.divInterface = React.createRef();
     this.divPreview = React.createRef();
     this.inputGeneralize = React.createRef();
-    this.tableResults = React.createRef();
 
     this.initSocket();
 
@@ -136,11 +134,9 @@ class PIDemo extends React.Component {
       qs.forEach((q) => {
         log.append($(`<p style='font-size: 12pt; width:100%'>${q}</p>`))
       })
-    })*/
-
+    })
     socket.on("table", ({ rows, columns }) => {
-      let table = this.tableResults.current!;
-
+      let table = $("#results").empty();
       let headertr = $("<tr/>")
       table.append(headertr)
       let body = $("<tbody/>")
@@ -156,7 +152,7 @@ class PIDemo extends React.Component {
       })
     })
 
-    
+    */
   }
 
   // funcs
@@ -230,7 +226,7 @@ class PIDemo extends React.Component {
             <div className="row" style={{ width: '100%' }}>
               <div className="col-md-12">
                 <h3>Latest Query Results</h3>
-                <table id="results" ref={this.tableResults} style={{ width: '100%' }}></table>
+                <table id="results" style={{ width: '100%' }}></table>
               </div>
             </div>
           </div>
